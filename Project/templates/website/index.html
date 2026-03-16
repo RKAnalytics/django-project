@@ -1,0 +1,69 @@
+{% load static %}
+<!-- why do we need to load static in the template?  -->
+<!-- because we need to use the static files in our template and 
+ to use the static files we need to load the static template tag library. -->
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project 1</title>
+    <!-- this is called templating engine in which we can inject the programatic code -->
+    <!-- // this is how we link the static files/assets in django -->
+  </head>
+  <link rel="stylesheet" href="{% static 'style.css' %}" />
+  <body class="home">
+    <div>
+      <header>
+        <nav>
+          <h2>Rafay Khan</h2>
+
+          <ul>
+            <li><a href="{% url 'Home' %}">Home</a></li>
+            <li><a href="{% url 'About' %}">About</a></li>
+            <li><a href="{% url 'Projects' %}">Projects</a></li>
+            <li><a href="{% url 'Contact' %}">Contact</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <section class="hero">
+        <h1>Hi, I'm Rafay Khan</h1>
+
+        <p>
+          Python Backend Developer | Software Engineering Enthusiast | AI & ML
+          Aspirant
+        </p>
+      </section>
+
+      <section class="section">
+        <h2>About Me</h2>
+
+        <p>
+          I am a Python backend developer passionate about building web
+          applications and learning modern software engineering practices.
+          Currently expanding my knowledge in Artificial Intelligence and
+          Machine Learning.
+        </p>
+      </section>
+
+      <section class="section">
+        <h2>Skills</h2>
+
+        <div class="skills">
+          <div class="skill">Python</div>
+          <div class="skill">Django</div>
+          <div class="skill">HTML</div>
+          <div class="skill">CSS</div>
+          <div class="skill">Git</div>
+          <div class="skill">SQL</div>
+        </div>
+      </section>
+
+      <footer>
+        <p>© 2026 Rafay Khan</p>
+      </footer>
+    </div>
+  </body>
+</html>

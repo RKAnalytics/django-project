@@ -1,0 +1,67 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projects | Rafay Khan</title>
+
+    <link rel="stylesheet" href="{% static 'style.css'%}" />
+  </head>
+
+  <body class="projects">
+    <header>
+      <nav>
+        <h2>Rafay Khan</h2>
+        <ul>
+          <li><a href="{% url 'Home' %}">Home</a></li>
+          <li><a href="{% url 'About' %}">About</a></li>
+          <li><a href="{% url 'Projects' %}">Projects</a></li>
+          <li><a href="{% url 'Contact' %}">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section class="section">
+      <h1>My Projects</h1>
+
+      <div class="projects-container">
+        <div class="project-card">
+          <h3>Blog Website</h3>
+
+          <p>
+            A blog application built with Django where users can create and
+            manage posts.
+          </p>
+
+          <a href="#">View Project</a>
+        </div>
+
+        <div class="project-card">
+          <h3>To-Do App</h3>
+
+          <p>
+            A task management application to track daily tasks using Python.
+          </p>
+
+          <a href="#">View Project</a>
+        </div>
+
+        <div class="project-card">
+          <h3>Portfolio Website</h3>
+
+          <p>
+            My personal portfolio website built using HTML, CSS, and Python
+            backend concepts.
+          </p>
+
+          <a href="#">View Project</a>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <p>© 2026 Rafay Khan</p>
+    </footer>
+  </body>
+</html>

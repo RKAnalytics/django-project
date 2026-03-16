@@ -1,0 +1,51 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact | Rafay Khan</title>
+
+    <link rel="stylesheet" href="{% static 'style.css'%}" />
+  </head>
+
+  <body class="contact">
+    <header>
+      <nav>
+        <h2>Rafay Khan</h2>
+
+        <ul>
+          <li><a href="{% url 'Home' %}">Home</a></li>
+          <li><a href="{% url 'About' %}">About</a></li>
+          <li><a href="{% url 'Projects' %}">Projects</a></li>
+          <li><a href="{% url 'Contact' %}">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section class="section">
+      <h1>Contact Me</h1>
+
+      <p>
+        If you'd like to work together or have any questions, feel free to reach
+        out.
+      </p>
+
+      <div class="contact-container">
+        <form>
+          <input type="text" placeholder="Your Name" required />
+
+          <input type="email" placeholder="Your Email" required />
+
+          <textarea placeholder="Your Message" rows="5"></textarea>
+
+          <button type="submit">Send Message</button>
+        </form>
+      </div>
+    </section>
+
+    <footer>
+      <p>© 2026 Rafay Khan</p>
+    </footer>
+  </body>
+</html>

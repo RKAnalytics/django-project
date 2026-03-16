@@ -1,0 +1,89 @@
+{% extends "layout.html" %}
+{% comment %} {% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About | Rafay Khan</title>
+
+    <link rel="stylesheet" href="{% static 'style.css'%}" />
+  </head>
+
+  <body class="about">
+    <header>
+      <nav>
+        <h2>Rafay Khan</h2>
+
+        <ul>
+          <li><a href="{% url 'Home' %}">Home</a></li>
+          <li><a href="{% url 'About' %}">About</a></li>
+          <li><a href="{% url 'Projects' %}">Projects</a></li>
+          <li><a href="{% url 'Contact' %}">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section class="section">
+      <h1>About Me</h1>
+
+      <p>
+        Hello! I'm <strong>Rafay Khan</strong>, a Python Backend Developer and
+        Software Engineering enthusiast.
+      </p>
+
+      <p>
+        I enjoy building backend systems and web applications using Python and
+        Django. Currently, I am expanding my knowledge in Artificial
+        Intelligence and Machine Learning.
+      </p>
+
+      <p>
+        My goal is to become a skilled software engineer capable of building
+        scalable systems and intelligent applications.
+      </p>
+    </section>
+
+    <section class="section">
+      <h2>My Journey</h2>
+
+      <p>
+        I started learning programming with Python and gradually developed an
+        interest in backend development and web technologies. As I continue
+        learning, I am exploring areas like AI, Machine Learning, and advanced
+        software development practices.
+      </p>
+    </section>
+
+    <section class="section">
+      <h2>Technologies I Work With</h2>
+
+      <div class="skills">
+        <div class="skill">Python</div>
+        <div class="skill">Django</div>
+        <div class="skill">HTML</div>
+        <div class="skill">CSS</div>
+        <div class="skill">Git</div>
+        <div class="skill">SQL</div>
+      </div>
+    </section>
+
+    <footer>
+      <p>© 2026 Rafay Khan</p>
+    </footer>
+  </body>
+</html>
+
+ {% endcomment %}
+
+
+{% block title %}About | Rafay Khan{% endblock %}
+
+{% block content %}
+    <h1>About Me</h1>
+    <p>
+        Hello! I'm <strong>Rafay Khan</strong>, a Python Backend Developer and
+        Software Engineering enthusiast.
+    </p>
+    <!-- Add more content as needed -->
+{% endblock %}

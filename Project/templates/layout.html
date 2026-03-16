@@ -1,0 +1,42 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        
+        {% comment %} 
+            Document instead of writing this title in every html file we can write it here 
+            in the layout.html file and then we can use this layout.html 
+            file as a base template for all the other html files
+            and then we can overwrite this title block in the child templates whenever
+            we want to change the title of the page and if we dont overwrite it then
+            it will be empty and it will not show anything in the title of the page
+        {% endcomment %} 
+        
+        {% block title %}
+            Default Value
+        {% endblock %} 
+
+        {% comment %} 
+            this above block can be overwrite whenever we want to change the title of 
+            the page in the child template and if we dont overwrite it then it will be
+            empty and it will not show anything in the title of the page
+     
+        {% endcomment %}
+         
+
+    </title>
+
+    <link rel="stylesheet" href="{% static "style.css" %}">
+</head>
+<body>
+    <nav>
+        this is our nav bar 
+        {% block content %}
+        
+        {% endblock %}
+    </nav>
+</body>
+</html>
