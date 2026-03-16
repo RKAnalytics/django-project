@@ -19,11 +19,11 @@ BASE_DIR = Path(__file__).resolve().parent.parent # this is the base directory o
 # important because we will use this variable to tell django where to look 
 #   for the templates and static files and other files in the project
 
-    
+
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/6.0/howto/deployment/checklist/
 
-# SECURITY WARNING: keep the secret key used in production secret!
+# SECURITY WARNING: keep the secret key used in production secret!      
 SECRET_KEY = 'django-insecure-mcs6yxdm&h2ys(y6%=(gtg7s#i2w(w6@=j5593waaygfil@vlb'
 
 # SECURITY WARNING: don't run with debug turned on in production!
@@ -45,7 +45,14 @@ INSTALLED_APPS = [
 #----------------------------------------------------------------------------------------------------------------------
     'app', # this is the new app we just made and why we do that to make our main project aware about the new app we just made
     # that the same thing we will gonna do with every new app
+
+    'tailwind', # this is the tailwind app that we just installed and this is the line 
+    # that tells django to look for the tailwind app and then look for the static files in that app and then return the response to the server
+    'theme',
 ]
+
+TAILWIND_APP_NAME = 'theme' # this is the line that tells django to look for the theme app and then look for the static files in that app and then return the response to the server
+INTERNAL_IPS = ['127.0.0.1'] 
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
