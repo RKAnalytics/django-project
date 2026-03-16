@@ -1,5 +1,5 @@
-from django.http import HttpResponse
-from django.shortcuts import render
+from django.http import HttpResponse #sends response to the server
+from django.shortcuts import render # this can display the HTML template and send the data to the template and then return the response to the server
 
 
 def home(request):

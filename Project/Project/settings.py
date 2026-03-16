@@ -14,9 +14,12 @@ from pathlib import Path
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
-BASE_DIR = Path(__file__).resolve().parent.parent
+BASE_DIR = Path(__file__).resolve().parent.parent # this is the base directory of the project and this is the line that tells 
+# django where the base directory of the project is located and this is 
+# important because we will use this variable to tell django where to look 
+#   for the templates and static files and other files in the project
 
-
+    
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/6.0/howto/deployment/checklist/
 
@@ -120,6 +123,25 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/6.0/howto/static-files/
 
-STATIC_URL = 'static/'
+STATIC_URL = 'static/' 
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')] # THIS IS THE LINE THAT TELLS DJANGO WHERE TO LOOK FOR STATIC FILES
 # AND I CREATED A FOLDER NAMED "STATIC" IN THE ROOT DIRECTORY OF THE PROJECT THAT CONTAINS THE CSS FILES
+#look for the static files in the static folder in the base directory of the project ---> Combine BASE_DIR + static folder path
+
+# Before configuration:#
+
+# Browser → asks for style.css
+#         ↓
+# Django doesn't know where it is
+#         ↓
+# 404 Error
+
+# After configuration:#
+
+# Browser → /static/style.css
+#         ↓
+# Django checks STATICFILES_DIRS
+#         ↓
+# Finds BASE_DIR/static/style.css
+#         ↓
+# CSS loads correctly
