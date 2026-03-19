@@ -49,10 +49,16 @@ INSTALLED_APPS = [
     'tailwind', # this is the tailwind app that we just installed and this is the line 
     # that tells django to look for the tailwind app and then look for the static files in that app and then return the response to the server
     'theme',
+    'django_browser_reload', # this is the line that tells django to look for the 
+    # django_browser_reload app and then look for the static files in that app and then return the response to the server
 ]
 
 TAILWIND_APP_NAME = 'theme' # this is the line that tells django to look for the theme app and then look for the static files in that app and then return the response to the server
-INTERNAL_IPS = ['127.0.0.1'] 
+INTERNAL_IPS = ['127.0.0.1']  #here the internal IPs is the IP address of the local machine and this is the line that tells django to allow the local machine to access the tailwind
+# app and then return the response to the server
+NPM_BIN_PATH = r"C:\Program Files\nodejs\npm.cmd" # this is the line that tells django where the npm is located in the local 
+# machine and this is important because we will use npm to install the tailwind and other dependencies for the tailwind app
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -62,6 +68,12 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+
+
+
+    "django_browser_reload.middleware.BrowserReloadMiddleware", 
+    # this is the line that tells django to look for the django_browser_reload app and
+    #then look for the static files in that app and then return the response to the server
 ]
 
 ROOT_URLCONF = 'Project.urls'
