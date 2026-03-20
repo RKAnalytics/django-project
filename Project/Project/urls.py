@@ -29,7 +29,7 @@ urlpatterns = [
     path('projects/', views.projects, name= "Projects"),
     path('contact/', views.contact, name= "Contact"),
     path('app/', include ("app.urls")), # this is the line that tells django to look for the urls.py file in the app folder and then look for the urls in that file and then return the response to the server
-    
-
+    # path('base/', include ("theme.urls")), # this is the line that tells django to look for the urls.py file in the base folder and then look for the urls in that file and then return the response to the server
+    path('base/', include ("theme.urls")), # this is the line that tells django to look for the urls.py file in the theme folder and then look for the urls in that file and then return the response to the server
     path("__reload__/", include("django_browser_reload.urls")), # this is the line that tells django to look for the urls.py file in the django_browser_reload folder and then look for the urls in that file and then return the response to the server
 ]
